@@ -20,10 +20,11 @@ h1 {
     font-family: "League Spartan",
             sans-serif;
     margin: 1rem 0;
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: -0.2rem;
+    max-width: 1000px;
 }
 h2{
     font-family: "League Spartan",
@@ -36,8 +37,7 @@ h2{
 /* nav styles */
 
 .menu {
-    display: flex;
-    justify-content: center;
+
     background-color: #000100;
     border: none;
     color: #fff;
@@ -46,11 +46,12 @@ h2{
     padding: 5px 10px;
 }
 .nav-links {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    display: none;
     margin: 0;
 }
-
+  
 .nav-links a {
     display: block;
     text-align: center;
@@ -74,7 +75,8 @@ h2{
 @media screen and (min-width: 636px) {
     .nav-links {
         margin-left: 5em;
-        display: block;
+        display: flex;
+        justify-content: center;
         position: static;
         width: auto;
         background: none;
@@ -88,33 +90,8 @@ h2{
               display: none;
           }
 }
-html.dark {
-    background-color: #0d0950;
-    color: #fff;
-}
-
-.dark .menu {
-    background-color: #fff;
-    color: #000;
-}
-
-.dark .nav-links a:hover,
-.dark .nav-links a:focus {
-    color: #0d0950;
-}
-
-.dark .nav-links a {
-    color: #fff;
-}
-
-.dark a {
-    color: #ff9776;
-}
 
 /* projects */
-a {
-    color: #00539f;
-}
 
 .technologies {
     display: flex;
@@ -122,6 +99,7 @@ a {
 }
 
 .tech {
+   
     margin: 0.25em;
     border: dotted 1px #a1a1a1;
     border-radius: 0.5em;
@@ -131,6 +109,15 @@ a {
 }
 
 /* project card layout */
+    .projects-grid{
+        display: grid;
+        /* responsive columns: fill available space with minimum width */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
   .project-card {
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -151,7 +138,7 @@ a {
 
   .project-card h3 {
       margin: 0 0 0.5rem 0;
-      color: #4c1d95;
+      color: #FF6406;
   }
 
   .project-card p {
@@ -174,6 +161,6 @@ a {
     margin: 0.5rem;
     padding: 0.75rem;
   }
-  .footer__link{
+  a{
     color: #FF6406;
   }
